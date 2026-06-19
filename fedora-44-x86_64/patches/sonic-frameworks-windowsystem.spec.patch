@@ -1,0 +1,15 @@
+diff --git a/sonic-frameworks-windowsystem/sonic-frameworks-windowsystem.spec b/sonic-frameworks-windowsystem/sonic-frameworks-windowsystem.spec
+--- a/sonic-frameworks-windowsystem/sonic-frameworks-windowsystem.spec
++++ b/sonic-frameworks-windowsystem/sonic-frameworks-windowsystem.spec
+@@ -46,1 +46,2 @@
+-Requires: sonic-win
++Provides: cmake(KF6WindowSystem)
++Provides: pkgconfig(KF6WindowSystem)
+@@ -74,2 +74,0 @@
+-rm -rf %{buildroot}/%{_libdir}/cmake
+-rm -rf %{buildroot}/%{_libdir}/pkgconfig
+@@ -88,2 +88,2 @@
+-# %{_libdir}/cmake/KF6WindowSystem
+-# %{_libdir}/pkgconfig/KF6WindowSystem.pc
++%{_libdir}/cmake/KF6WindowSystem
++%{_libdir}/pkgconfig/KF6WindowSystem.pc

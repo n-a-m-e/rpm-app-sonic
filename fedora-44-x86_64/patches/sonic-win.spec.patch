@@ -1,0 +1,11 @@
+diff --git a/sonic-win/sonic-win.spec b/sonic-win/sonic-win.spec
+--- a/sonic-win/sonic-win.spec
++++ b/sonic-win/sonic-win.spec
+@@ -45,1 +45,4 @@
++BuildRequires: cmake(Qt6Svg)
++BuildRequires: cmake(KF6I18n)
++BuildRequires: cmake(KF6WindowSystem)
+ BuildRequires: cmake(Qt6Core5Compat)
+@@ -216,1 +216,2 @@
+ %{_datadir}/qlogging-categories6/org_kde_kwin_x11.categories
++%doc %{_docdir}/HTML/*
