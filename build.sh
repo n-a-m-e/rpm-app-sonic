@@ -12,23 +12,70 @@ log(){ printf '[%s] %s\n' "$(date -u +'%H:%M:%S')" "$*" | tee -a "$LOG" >&2; }
 die(){ log "ERROR: $*"; exit 1; }
 norm(){ tr '[:upper:]' '[:lower:]' <<<"$1" | sed -E 's/[^a-z0-9]//g'; }
 blacklisted(){ local x="${1,,}" b; for b in "${BLACKLIST[@]}"; do [[ "$x" == "${b,,}" ]] && return 0; done; return 1; }
-need(){ local c; for c in curl tar git package-build-queue; do command -v "$c" >/dev/null || die "$c missing"; done; compgen -G 'specs/*.spec' >/dev/null || die 'no local spec files found in specs/'; }
+need(){ local c; for c in curl tar git package-build-queue; do command -v "$c" >/dev/null || die "$c missing"; done; }
 add(){ local p="$1"; [[ -n "$p" ]] || return 0; blacklisted "$p" && { log "Skip blacklisted package: $p"; return 0; }; grep -Fxq "$p" "$OUT/.packages" 2>/dev/null || printf '%s\n' "$p" >> "$OUT/.packages"; }
 
 init(){ rm -rf "$OUT" .repos.tsv "$LOG"; mkdir -p "$OUT"; : >"$OUT/.packages"; : >"$LOG"; }
 
-copy_specs(){
-  local spec pkg n=0
-  log 'Copying local specs'
-  while IFS= read -r spec; do
-    pkg=${spec##*/}; pkg=${pkg%.spec}
-    blacklisted "$pkg" && { log "Skip blacklisted local spec: $pkg"; continue; }
-    mkdir -p "$OUT/$pkg"
-    cp "$spec" "$OUT/$pkg/$pkg.spec"
-    add "$pkg"
-    n=$((n + 1))
-  done < <(find specs -maxdepth 1 -type f -name '*.spec' | LC_ALL=C sort)
-  log "Local specs declared: $n"
+targets(){
+  printf '%s\n' "${TARGETS:-}" | tr ', ' '\n' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//;/^$/d'
+}
+
+target_layers(){
+  local target="$1" family part layer=""
+  family="${target%-*}"
+
+  IFS='-' read -r -a parts <<< "$family"
+  for part in "${parts[@]}"; do
+    [[ -n "$part" ]] || continue
+    layer="${layer:+$layer-}$part"
+    printf '%s\n' "$layer"
+  done
+
+  [[ "$target" == "$family" ]] || printf '%s\n' "$target"
+}
+
+spec_dirs(){
+  local target layer dir
+  declare -A seen=()
+
+  if [[ -d specs ]]; then
+    seen[specs]=1
+    printf '%s\n' specs
+  fi
+
+  if targets | grep -q .; then
+    while IFS= read -r target; do
+      while IFS= read -r layer; do
+        dir="$layer/specs"
+        [[ -d "$dir" && -z "${seen[$dir]:-}" ]] || continue
+        seen[$dir]=1
+        printf '%s\n' "$dir"
+      done < <(target_layers "$target")
+    done < <(targets)
+  else
+    while IFS= read -r dir; do
+      [[ -z "${seen[$dir]:-}" ]] || continue
+      seen[$dir]=1
+      printf '%s\n' "$dir"
+    done < <(find . -mindepth 2 -maxdepth 2 -type d -name specs | sed 's#^./##' | LC_ALL=C sort)
+  fi
+}
+
+layered_specs(){
+  local dir
+  while IFS= read -r dir; do
+    find "$dir" -maxdepth 1 -type f -name '*.spec'
+  done < <(spec_dirs) | LC_ALL=C sort
+}
+
+local_specs_available(){ layered_specs | grep -q .; }
+
+report_local_specs(){
+  local count
+  count=$(layered_specs | wc -l | tr -d '[:space:]')
+  [[ "$count" -gt 0 ]] || { log 'No local layered specs found'; return 0; }
+  log "Local layered specs found: $count"
 }
 
 discover(){
@@ -57,7 +104,11 @@ discover(){
     rm -f "$tmp"
   done
 
-  [[ -s .repos.tsv ]] || die 'GitHub lookup returned no package repos'
+  if [[ ! -s .repos.tsv ]]; then
+    local_specs_available && { log 'No GitHub package repos found; using local layered specs only'; return 0; }
+    die 'GitHub lookup returned no package repos'
+  fi
+
   cut -f1 .repos.tsv | sort -u > "$OUT/.discovered-repos"
   awk -F '\t' 'BEGIN{OFS="\t"} {print $1, "https://github.com/" $2}' .repos.tsv > "$OUT/.repo-map.tsv"
   log "Discovered package repos: $n"
@@ -88,6 +139,7 @@ fetch(){
 
 fetch_all(){
   local repo full
+  [[ -s .repos.tsv ]] || return 0
   log 'Fetching discovered package repos'
   while IFS=$'\t' read -r repo full; do
     [[ -n "$repo" ]] || continue
@@ -97,9 +149,16 @@ fetch_all(){
 }
 
 queue(){
-  local pkg url ref
+  local pkg url ref package_count
   sort -u "$OUT/.packages" -o "$OUT/.packages"
-  log "Final package declarations: $(wc -l < "$OUT/.packages") packages"
+  package_count=$(wc -l < "$OUT/.packages" | tr -d '[:space:]')
+
+  if [[ "$package_count" -eq 0 ]]; then
+    local_specs_available && { log 'No downloaded packages queued; builder will queue local layered specs per target'; return 0; }
+    die 'no packages found from GitHub or local layered specs'
+  fi
+
+  log "Final package declarations: $package_count packages"
   sed 's/^/  /' "$OUT/.packages" | tee -a "$LOG" >&2
 
   git -C "$OUT" init -q
@@ -115,5 +174,5 @@ queue(){
   done < "$OUT/.packages"
 }
 
-main(){ need; init; copy_specs; discover; fetch_all; queue; }
+main(){ need; init; report_local_specs; discover; fetch_all; queue; }
 main "$@"
