@@ -1,0 +1,19 @@
+diff --git a/silver-theme/silver-theme.spec b/silver-theme/silver-theme.spec
+--- a/silver-theme/silver-theme.spec
++++ b/silver-theme/silver-theme.spec
+@@ -30,6 +30,0 @@
+-BuildRequires:  cmake(KF6Config)
+-BuildRequires:  cmake(KF6CoreAddons)
+-BuildRequires:  cmake(KF6FrameworkIntegration)
+-BuildRequires:  cmake(KF6GuiAddons)
+-BuildRequires:  cmake(KF6I18n)
+-BuildRequires:  cmake(KF6IconThemes)
+@@ -38,1 +38,0 @@
+-BuildRequires:  cmake(KF6WindowSystem)
+@@ -40,2 +40,0 @@
+-BuildRequires:  cmake(Qt6DBus)
+-BuildRequires:  cmake(Qt6Quick)
+@@ -43,1 +43,0 @@
+-BuildRequires:  cmake(Qt6Widgets)
+@@ -47,1 +47,0 @@
+-BuildRequires:  cmake(Qt6ExamplesAssetDownloaderPrivate)
