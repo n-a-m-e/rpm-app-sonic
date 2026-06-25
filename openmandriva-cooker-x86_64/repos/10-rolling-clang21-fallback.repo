@@ -4,5 +4,5 @@ baseurl=https://mirror.openmandriva.org/rolling/repository/x86_64/main/release/
 enabled=1
 gpgcheck=0
 priority=200
-includepkgs=libclang* lib64clang* clang* llvm* libllvm* lib64llvm* lib64omp*
+includepkgs=libclang* lib64clang* clang* llvm* libllvm* lib64llvm* lib64omp* lld*
 metadata_expire=0
