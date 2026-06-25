@@ -1,0 +1,8 @@
+[openmandriva-rolling-clang21-fallback]
+name=OpenMandriva Rolling Clang 21 fallback
+baseurl=https://mirror.openmandriva.org/rolling/repository/x86_64/main/release/
+enabled=1
+gpgcheck=0
+priority=200
+includepkgs=libclang* clang* llvm* libllvm*
+metadata_expire=0
