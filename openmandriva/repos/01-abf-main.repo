@@ -1,0 +1,9 @@
+# builder-mode: replace
+
+[openmandriva-{release}]
+name=OpenMandriva {release} {arch} main release ABF
+baseurl=http://abf-downloads.openmandriva.org/{release}/repository/{arch}/main/release/
+enabled=1
+gpgcheck=1
+metadata_expire=0
+skip_if_unavailable=0

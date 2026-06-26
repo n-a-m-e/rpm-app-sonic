@@ -1,9 +1,0 @@
-[openmandriva-cooker-overrides]
-name=OpenMandriva Cooker targeted overrides
-baseurl=https://rpmfind.net/linux/openmandriva/cooker/repository/x86_64/main/release/
-enabled=1
-gpgcheck=0
-priority=1
-includepkgs=pyside6* shiboken6* lib64shiboken6* doxygen*
-metadata_expire=0
-skip_if_unavailable=0
