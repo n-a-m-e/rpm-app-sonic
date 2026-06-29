@@ -1,0 +1,15 @@
+diff --git a/sonic-frameworks-core-addons/sonic-frameworks-core-addons.spec b/sonic-frameworks-core-addons/sonic-frameworks-core-addons.spec
+--- a/sonic-frameworks-core-addons/sonic-frameworks-core-addons.spec
++++ b/sonic-frameworks-core-addons/sonic-frameworks-core-addons.spec
+@@ -74,1 +74,3 @@
++Provides: cmake(KF6CoreAddons) = %{version}
++Provides: pkgconfig(KF6CoreAddons) = %{version}
+ Conflicts: %{_lib}KF6CoreAddons-devel
+@@ -91,2 +91,0 @@
+-rm -rf %{buildroot}/%{_libdir}/cmake
+-rm -rf %{buildroot}/%{_libdir}/pkgconfig
+@@ -103,2 +103,2 @@
+-# %{_libdir}/cmake/KF6CoreAddons
+-# %{_libdir}/pkgconfig/KF6CoreAddons.pc
++%{_libdir}/cmake/KF6CoreAddons
++%{_libdir}/pkgconfig/KF6CoreAddons.pc
