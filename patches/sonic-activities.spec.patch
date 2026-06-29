@@ -1,0 +1,6 @@
+diff --git a/sonic-activities/sonic-activities.spec b/sonic-activities/sonic-activities.spec
+--- a/sonic-activities/sonic-activities.spec
++++ b/sonic-activities/sonic-activities.spec
+@@ -41,1 +41,1 @@
+-# BuildRequires: cmake(KF6CoreAddons)
++BuildRequires: cmake(KF6CoreAddons)
