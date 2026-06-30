@@ -1,8 +1,6 @@
 diff --git a/sonic-frameworks-io-extras/sonic-frameworks-io-extras.spec b/sonic-frameworks-io-extras/sonic-frameworks-io-extras.spec
 --- a/sonic-frameworks-io-extras/sonic-frameworks-io-extras.spec
 +++ b/sonic-frameworks-io-extras/sonic-frameworks-io-extras.spec
-@@ -16,1 +16,0 @@
--Source1000: %{name}.rpmlintrc
 @@ -100,1 +100,2 @@
 +Provides: cmake(KioArchive6) = %{version}
  Conflicts: %{_lib}kioarchive6-devel
