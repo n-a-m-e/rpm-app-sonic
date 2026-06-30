@@ -3,7 +3,7 @@ diff --git a/sonic-decoration/sonic-decoration.spec b/sonic-decoration/sonic-dec
 +++ b/sonic-decoration/sonic-decoration.spec
 @@ -53,1 +53,0 @@
 -rm -rf %{buildroot}/%{_libdir}/cmake
-@@ -63,1 +63,3 @@
+@@ -63,1 +63,2 @@
 +Provides: cmake(KDecoration3) = %{version}
  Conflicts: %{_lib}kdecorations3-devel
 @@ -75,1 +75,1 @@
