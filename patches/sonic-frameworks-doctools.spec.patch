@@ -1,7 +1,7 @@
 diff --git a/sonic-frameworks-doctools/sonic-frameworks-doctools.spec b/sonic-frameworks-doctools/sonic-frameworks-doctools.spec
 --- a/sonic-frameworks-doctools/sonic-frameworks-doctools.spec
 +++ b/sonic-frameworks-doctools/sonic-frameworks-doctools.spec
-@@ -66,1 +66,3 @@
+@@ -66,1 +66,2 @@
 +Provides: cmake(KF6DocTools) = %{version}
  Conflicts: %{_lib}KF6DocTools-devel
 @@ -75,1 +75,0 @@
