@@ -1,14 +1,9 @@
 diff --git a/sonic-frameworks-open-collab/sonic-frameworks-open-collab.spec b/sonic-frameworks-open-collab/sonic-frameworks-open-collab.spec
 --- a/sonic-frameworks-core-addons/sonic-frameworks-open-collab.spec
 +++ b/sonic-frameworks-core-addons/sonic-frameworks-open-collab.spec
-@@ -44,1 +44,2 @@
-+Provides: kf6-attica
- Conflicts: kf6-attica
-@@ -53,1 +53,2 @@
-+Provides: %{_lib}KF6Attica
- Conflicts: %{_lib}KF6Attica
-@@ -62,1 +62,2 @@
-+Provides: %{_lib}KF6Attica-devel
+@@ -62,1 +62,3 @@
++Provides: cmake(KF6Attica) = %{version}
++Provides: pkgconfig(KF6Attica) = %{version}
  Conflicts: %{_lib}KF6Attica-devel
 @@ -70,2 +70,0 @@
 -rm -rf %{buildroot}/%{_libdir}/cmake
