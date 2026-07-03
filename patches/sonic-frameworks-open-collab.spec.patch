@@ -1,6 +1,6 @@
 diff --git a/sonic-frameworks-open-collab/sonic-frameworks-open-collab.spec b/sonic-frameworks-open-collab/sonic-frameworks-open-collab.spec
---- a/sonic-frameworks-core-addons/sonic-frameworks-open-collab.spec
-+++ b/sonic-frameworks-core-addons/sonic-frameworks-open-collab.spec
+--- a/sonic-frameworks-open-collab/sonic-frameworks-open-collab.spec
++++ b/sonic-frameworks-open-collab/sonic-frameworks-open-collab.spec
 @@ -62,1 +62,3 @@
 +Provides: cmake(KF6Attica) = %{version}
 +Provides: pkgconfig(KF6Attica) = %{version}
