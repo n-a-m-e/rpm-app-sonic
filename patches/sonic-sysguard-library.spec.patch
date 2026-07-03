@@ -15,7 +15,7 @@ diff --git a/sonic-sysguard-library/sonic-sysguard-library.spec b/sonic-sysguard
  Conflicts: %{_lib}processcore
 @@ -165,1 +165,2 @@
 +Provides: %{_lib}KSysGuardFormatter
- Conflicts: %{_lib}KSysGuardFormatter
+ Conflicts:  %{_lib}KSysGuardFormatter
 @@ -181,1 +181,2 @@
 +Provides: %{_lib}KSysGuardSensorFaces
  Conflicts: %{_lib}KSysGuardSensorFaces
