@@ -1,14 +1,9 @@
 diff --git a/sonic-activities/sonic-activities.spec b/sonic-activities/sonic-activities.spec
 --- a/sonic-activities/sonic-activities.spec
 +++ b/sonic-activities/sonic-activities.spec
-@@ -32,2 +32,0 @@
--BuildRequires: doxygen
--BuildRequires: cmake(Qt6ToolsTools)
 @@ -41,1 +41,1 @@
 -# BuildRequires: cmake(KF6CoreAddons)
 +BuildRequires: cmake(KF6CoreAddons)
-@@ -47,1 +47,0 @@
--BuildOption: -DBUILD_QCH:BOOL=ON
 @@ -69,1 +69,3 @@
 +Provides: cmake(PlasmaActivities) = %{version}
 +Provides: pkgconfig(PlasmaActivities) = %{version}
