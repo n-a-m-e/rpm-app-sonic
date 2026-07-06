@@ -5,3 +5,6 @@ diff --git a/sonic-network-manager/sonic-network-manager.spec b/sonic-network-ma
 +BuildRequires: cmake(Qt6Keychain)
 +BuildRequires: cmake(KF6KirigamiAddons)
  BuildRequires:  %{_lib}SonicDE-devel
+@@ -83,1 +83,2 @@
++%{_libdir}/libplasmanm_cellular.so
+ %{_libdir}/libplasmanm_editor.so
