@@ -12,3 +12,6 @@ diff --git a/sonic-interface-libraries/sonic-interface-libraries.spec b/sonic-in
 -# %{_libdir}/cmake/PlasmaQuick
 +%{_libdir}/cmake/Plasma
 +%{_libdir}/cmake/PlasmaQuick
+@@ -163,2 +163,0 @@
+-%files doc
+-%{_qtdir}/doc/Plasma.*
