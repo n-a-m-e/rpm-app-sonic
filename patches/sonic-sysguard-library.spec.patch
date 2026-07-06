@@ -2,8 +2,8 @@ diff --git a/sonic-sysguard-library/sonic-sysguard-library.spec b/sonic-sysguard
 --- a/sonic-sysguard-library/sonic-sysguard-library.spec
 +++ b/sonic-sysguard-library/sonic-sysguard-library.spec
 @@ -10,1 +10,1 @@
-+%define processcore_major 11
 -%define processcore_major 10
++%define processcore_major 11
 @@ -133,1 +133,2 @@
 +Provides: %{_lib}KSysGuardSystemStats
  Conflicts: %{_lib}KSysGuardSystemStats
@@ -12,7 +12,7 @@ diff --git a/sonic-sysguard-library/sonic-sysguard-library.spec b/sonic-sysguard
  Conflicts: %{_lib}processcore
 @@ -165,1 +165,2 @@
 +Provides: %{_lib}KSysGuardFormatter
- Conflicts: %{_lib}KSysGuardFormatter
+ Conflicts:  %{_lib}KSysGuardFormatter
 @@ -181,1 +181,2 @@
 +Provides: %{_lib}KSysGuardSensorFaces
  Conflicts: %{_lib}KSysGuardSensorFaces
