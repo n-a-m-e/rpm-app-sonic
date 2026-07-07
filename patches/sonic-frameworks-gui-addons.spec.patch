@@ -1,6 +1,9 @@
 diff --git a/sonic-frameworks-gui-addons/sonic-frameworks-gui-addons.spec b/sonic-frameworks-gui-addons/sonic-frameworks-gui-addons.spec
 --- a/sonic-frameworks-gui-addons/sonic-frameworks-gui-addons.spec
 +++ b/sonic-frameworks-gui-addons/sonic-frameworks-gui-addons.spec
+@@ -9,1 +9,1 @@
+-Version: 6.26.0
++Version: 6.27.0
 @@ -77,1 +77,3 @@
 +Provides: cmake(KF6GuiAddons) = %{version}
 +Provides: pkgconfig(KF6GuiAddons) = %{version}
