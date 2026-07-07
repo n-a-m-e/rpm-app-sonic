@@ -1,6 +1,9 @@
 diff --git a/sonic-workspace-addons/sonic-workspace-addons.spec b/sonic-workspace-addons/sonic-workspace-addons.spec
 --- a/sonic-workspace-addons/sonic-workspace-addons.spec
 +++ b/sonic-workspace-addons/sonic-workspace-addons.spec
+@@ -14,1 +14,1 @@
+Version: 6.6.5
+Version: 6.7.2
 @@ -33,1 +33,1 @@
 -BuildRequires: %{_lib}SonicFramworksIO-devel
 +BuildRequires: %{_lib}SonicFrameworksIO-devel
