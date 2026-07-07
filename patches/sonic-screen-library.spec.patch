@@ -1,6 +1,9 @@
 diff --git a/sonic-screen-library/sonic-screen-library.spec b/sonic-screen-library/sonic-screen-library.spec
 --- a/sonic-screen-library/sonic-screen-library.spec
 +++ b/sonic-screen-library/sonic-screen-library.spec
+@@ -11,1 +11,1 @@
+-Version:	6.6.5
++Version:	6.7.2
 @@ -80,1 +80,3 @@
 +Provides: cmake(KF6Screen) = %{version}
 +Provides: pkgconfig(KF6Screen) = %{version}
