@@ -1,8 +1,6 @@
 diff --git a/sonic-screen/sonic-screen.spec b/sonic-screen/sonic-screen.spec
 --- a/sonic-screen/sonic-screen.spec
 +++ b/sonic-screen/sonic-screen.spec
-@@ -26,1 +26,3 @@
--# BuildRequires:	cmake(KF6Screen)
-+BuildRequires: cmake(KF6Screen)
-+BuildRequires: cmake(KF6KirigamiPlatform)
-+BuildRequires: cmake(KF6WindowSystem)
+@@ -8,1 +8,1 @@
+-Version:	6.6.5
++Version:	6.7.2
