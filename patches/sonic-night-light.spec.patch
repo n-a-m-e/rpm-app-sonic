@@ -1,6 +1,9 @@
 diff --git a/sonic-night-light/sonic-night-light.spec b/sonic-night-light/sonic-night-light.spec
 --- a/sonic-night-light/sonic-night-light.spec
 +++ b/sonic-night-light/sonic-night-light.spec
+@@ -12,1 +12,1 @@
+-Version: 6.6.5
++Version: 6.7.2
 @@ -58,1 +58,2 @@
 +Provides: cmake(KNightTime) = %{version}
  Conflicts: %{_lib}KNightTime-devel
