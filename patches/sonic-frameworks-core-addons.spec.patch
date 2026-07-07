@@ -1,6 +1,9 @@
 diff --git a/sonic-frameworks-core-addons/sonic-frameworks-core-addons.spec b/sonic-frameworks-core-addons/sonic-frameworks-core-addons.spec
 --- a/sonic-frameworks-core-addons/sonic-frameworks-core-addons.spec
 +++ b/sonic-frameworks-core-addons/sonic-frameworks-core-addons.spec
+@@ -14,1 +14,1 @@
+-Version: 6.26.0
++Version: 6.27.0
 @@ -74,1 +74,3 @@
 +Provides: cmake(KF6CoreAddons) = %{version}
 +Provides: pkgconfig(KF6CoreAddons) = %{version}
