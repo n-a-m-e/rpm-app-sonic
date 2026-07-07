@@ -1,6 +1,9 @@
 diff --git a/sonic-network-manager/sonic-network-manager.spec b/sonic-network-manager/sonic-network-manager.spec
 --- a/sonic-network-manager/sonic-network-manager.spec
 +++ b/sonic-network-manager/sonic-network-manager.spec
+@@ -9,1 +9,1 @@
+-Version:	6.6.5
++Version:	6.7.2
 @@ -31,1 +31,3 @@
 +BuildRequires: cmake(Qt6Keychain)
 +BuildRequires: cmake(KF6KirigamiAddons)
