@@ -1,6 +1,9 @@
 diff --git a/sonic-activities/sonic-activities.spec b/sonic-activities/sonic-activities.spec
 --- a/sonic-activities/sonic-activities.spec
 +++ b/sonic-activities/sonic-activities.spec
+@@ -10,1 +10,1 @@
+-Version: 6.6.5
++Version: 6.7.2
 @@ -41,1 +41,1 @@
 -# BuildRequires: cmake(KF6CoreAddons)
 +BuildRequires: cmake(KF6CoreAddons)
