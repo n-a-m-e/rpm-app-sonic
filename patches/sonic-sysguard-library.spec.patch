@@ -7,6 +7,9 @@ diff --git a/sonic-sysguard-library/sonic-sysguard-library.spec b/sonic-sysguard
 @@ -24,1 +24,1 @@
 -Version:	6.6.5
 +Version:	6.7.2
+@@ -108,1 +108,2 @@
+ %files -f %{name}.lang
++%{_bindir}/ksysguard-identify
 @@ -133,1 +133,2 @@
 +Provides: %{_lib}KSysGuardSystemStats
  Conflicts: %{_lib}KSysGuardSystemStats
