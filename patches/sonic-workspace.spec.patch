@@ -4,3 +4,29 @@ diff --git a/sonic-workspace/sonic-workspace.spec b/sonic-workspace/sonic-worksp
 @@ -12,1 +12,1 @@
 -Version: 6.6.5
 +Version: 6.7.2
+@@ -258,1 +258,8 @@
++Provides: cmake(KRunnerAppDBusInterface) = %{version}
++Provides: cmake(KSMServerDBusInterface) = %{version}
++Provides: cmake(LibKWorkspace) = %{version}
++Provides: cmake(LibTaskManager) = %{version}
++Provides: cmake(Krdb) = %{version}
++Provides: cmake(LibKLookAndFeel) = %{version}
++Provides: cmake(LibNotificationManager) = %{version}
+ Conflicts:  plasma-workspace-devel
+@@ -313,1 +313,0 @@
+-rm -rf %{buildroot}/%{_libdir}/cmake
+@@ -551,7 +551,7 @@
+-# %{_libdir}/cmake/KRunnerAppDBusInterface
+-# %{_libdir}/cmake/KSMServerDBusInterface
+-# %{_libdir}/cmake/LibKWorkspace
+-# %{_libdir}/cmake/LibTaskManager
+-# %{_libdir}/cmake/Krdb
+-# %{_libdir}/cmake/LibKLookAndFeel
+-# %{_libdir}/cmake/LibNotificationManager
++%{_libdir}/cmake/KRunnerAppDBusInterface
++%{_libdir}/cmake/KSMServerDBusInterface
++%{_libdir}/cmake/LibKWorkspace
++%{_libdir}/cmake/LibTaskManager
++%{_libdir}/cmake/Krdb
++%{_libdir}/cmake/LibKLookAndFeel
++%{_libdir}/cmake/LibNotificationManager
