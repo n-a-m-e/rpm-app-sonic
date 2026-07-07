@@ -1,7 +1,6 @@
 diff --git a/sonic-screenlocker/sonic-screenlocker.spec b/sonic-screenlocker/sonic-screenlocker.spec
 --- a/sonic-screenlocker/sonic-screenlocker.spec
 +++ b/sonic-screenlocker/sonic-screenlocker.spec
-sonic-screenlocker
 @@ -8,1 +8,1 @@
 -Version:	6.6.5.1
 +Version:	6.7.2
