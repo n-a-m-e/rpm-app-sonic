@@ -1,6 +1,9 @@
 diff --git a/sonic-interface-libraries/sonic-interface-libraries.spec b/sonic-interface-libraries/sonic-interface-libraries.spec
 --- a/sonic-interface-libraries/sonic-interface-libraries.spec
 +++ b/sonic-interface-libraries/sonic-interface-libraries.spec
+@@ -10,1 +10,1 @@
+-Version: 6.6.5
++Version: 6.7.2
 @@ -106,1 +106,3 @@
 +Provides: cmake(Plasma) = %{version}
 +Provides: cmake(PlasmaQuick) = %{version}
