@@ -4,3 +4,5 @@ diff --git a/sonic-system-info/sonic-system-info.spec b/sonic-system-info/sonic-
 @@ -7,1 +7,1 @@
 -Version: 6.6.5
 +Version: 6.7.2
+@@ -119,1 +119,0 @@
+-%{_datadir}/applications/kcm_energyinfo.desktop
