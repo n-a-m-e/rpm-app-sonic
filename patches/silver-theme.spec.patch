@@ -1,6 +1,8 @@
 diff --git a/silver-theme/silver-theme.spec b/silver-theme/silver-theme.spec
 --- a/silver-theme/silver-theme.spec
 +++ b/silver-theme/silver-theme.spec
+@@ -2,1 +2,1 @@
+ Version:	6.6.0
 @@ -14,1 +14,0 @@
 -BuildRequires:	appstream
 @@ -24,4 +24,0 @@
