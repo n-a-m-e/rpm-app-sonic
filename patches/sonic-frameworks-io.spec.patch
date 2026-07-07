@@ -1,6 +1,9 @@
 diff --git a/sonic-frameworks-io/sonic-frameworks-io.spec b/sonic-frameworks-io/sonic-frameworks-io.spec
 --- a/sonic-frameworks-io/sonic-frameworks-io.spec
 +++ b/sonic-frameworks-io/sonic-frameworks-io.spec
+@@ -9,1 +9,1 @@
+-Version: 6.26.0
++Version: 6.27.0
 @@ -115,1 +115,2 @@
 +Provides: cmake(KF6KIO) = %{version}
  Conflicts:  %{_lib}KF6KIO-devel
