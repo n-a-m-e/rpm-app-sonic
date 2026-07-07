@@ -1,6 +1,9 @@
 diff --git a/sonic-frameworks-auth/sonic-frameworks-auth.spec b/sonic-frameworks-auth/sonic-frameworks-auth.spec
 --- a/sonic-frameworks-auth/sonic-frameworks-auth.spec
 +++ b/sonic-frameworks-auth/sonic-frameworks-auth.spec
+@@ -9,1 +9,1 @@
+-Version: 6.26.0
++Version: 6.27.0
 @@ -70,1 +70,2 @@
 +Provides: cmake(KF6Auth) = %{version}
  Conflicts:  %{_lib}KF6Auth-devel
