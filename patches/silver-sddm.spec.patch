@@ -1,5 +1,0 @@
-diff --git a/silver-sddm/silver-sddm.spec b/silver-sddm/silver-sddm.spec
---- a/silver-sddm/silver-sddm.spec
-+++ b/silver-sddm/silver-sddm.spec
-@@ -2,1 +2,1 @@
- Version: 1.0.0
