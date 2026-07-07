@@ -1,6 +1,9 @@
 diff --git a/sonic-frameworks-keybind/sonic-frameworks-keybind.spec b/sonic-frameworks-keybind/sonic-frameworks-keybind.spec
 --- a/sonic-frameworks-keybind/sonic-frameworks-keybind.spec
 +++ b/sonic-frameworks-keybind/sonic-frameworks-keybind.spec
+@@ -9,1 +9,1 @@
+-Version: 6.26.0
++Version: 6.27.0
 @@ -64,1 +64,2 @@
 +Provides: cmake(KF6GlobalAccel) = %{version}
  Conflicts: %{_lib}KF6GlobalAccel-devel
