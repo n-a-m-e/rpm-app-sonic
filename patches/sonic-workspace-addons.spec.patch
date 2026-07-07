@@ -7,3 +7,9 @@ diff --git a/sonic-workspace-addons/sonic-workspace-addons.spec b/sonic-workspac
 @@ -33,1 +33,1 @@
 -BuildRequires: %{_lib}SonicFramworksIO-devel
 +BuildRequires: %{_lib}SonicFrameworksIO-devel
+@@ -94,1 +94,2 @@
++Provides:      cmake(PlasmaWeather) = %{version}
+ Conflicts:     kdeplasma-addons
+@@ -157,1 +157,2 @@
++%{_libdir}/cmake/PlasmaWeather
+ %{_qtdir}/plugins/plasma/weather_ions
