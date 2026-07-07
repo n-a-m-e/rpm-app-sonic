@@ -1,6 +1,9 @@
 diff --git a/sonic-frameworks-windowsystem/sonic-frameworks-windowsystem.spec b/sonic-frameworks-windowsystem/sonic-frameworks-windowsystem.spec
 --- a/sonic-frameworks-windowsystem/sonic-frameworks-windowsystem.spec
 +++ b/sonic-frameworks-windowsystem/sonic-frameworks-windowsystem.spec
+@@ -9,1 +9,1 @@
+-Version: 6.26.0
++Version: 6.27.0
 @@ -65,1 +65,3 @@
 +Provides: cmake(KF6WindowSystem) = %{version}
 +Provides: pkgconfig(KF6WindowSystem) = %{version}
