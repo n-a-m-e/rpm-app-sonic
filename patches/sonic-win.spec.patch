@@ -4,3 +4,13 @@ diff --git a/sonic-win/sonic-win.spec b/sonic-win/sonic-win.spec
 @@ -12,1 +12,1 @@
 -Version: 6.6.5
 +Version: 6.7.2
+@@ -179,1 +179,2 @@
++Provides: cmake(KWinX11DBusInterface) = %{version}
+ Conflicts: kwin-x11-devel
+@@ -185,1 +185,0 @@
+-rm -rf %{buildroot}/%{_libdir}/cmake
+@@ -222,2 +222,2 @@
+-# %{_libdir}/cmake/KWinX11
+-# %{_libdir}/cmake/KWinX11DBusInterface
++%{_libdir}/cmake/KWinX11
++%{_libdir}/cmake/KWinX11DBusInterface
