@@ -1,6 +1,6 @@
 diff --git a/sonic-desktop-interface/sonic-desktop-interface.spec b/sonic-desktop-interface/sonic-desktop-interface.spec
---- a/sonic-frameworks-core-addons/sonic-desktop-interface.spec
-+++ b/sonic-frameworks-core-addons/sonic-desktop-interface.spec
+--- a/sonic-desktop-interface/sonic-desktop-interface.spec
++++ b/sonic-desktop-interface/sonic-desktop-interface.spec
 @@ -8,1 +8,1 @@
 -Version: 6.6.5
 +Version: 6.7.2
