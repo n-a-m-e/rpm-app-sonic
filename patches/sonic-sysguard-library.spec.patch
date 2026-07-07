@@ -4,6 +4,9 @@ diff --git a/sonic-sysguard-library/sonic-sysguard-library.spec b/sonic-sysguard
 @@ -10,1 +10,1 @@
 -%define processcore_major 10
 +%define processcore_major 11
+@@ -24,1 +24,1 @@
+-Version:	6.6.5
++Version:	6.7.2
 @@ -133,1 +133,2 @@
 +Provides: %{_lib}KSysGuardSystemStats
  Conflicts: %{_lib}KSysGuardSystemStats
