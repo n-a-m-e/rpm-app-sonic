@@ -1,6 +1,9 @@
 diff --git a/sonic-frameworks-io-extras/sonic-frameworks-io-extras.spec b/sonic-frameworks-io-extras/sonic-frameworks-io-extras.spec
 --- a/sonic-frameworks-io-extras/sonic-frameworks-io-extras.spec
 +++ b/sonic-frameworks-io-extras/sonic-frameworks-io-extras.spec
+@@ -12,1 +12,1 @@
+-Version:	26.04.1
++Version:	26.04.2
 @@ -100,1 +100,2 @@
 +Provides: cmake(KioArchive6) = %{version}
  Conflicts: %{_lib}kioarchive6-devel
