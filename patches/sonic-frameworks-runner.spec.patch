@@ -1,6 +1,9 @@
 diff --git a/sonic-frameworks-runner/sonic-frameworks-runner.spec b/sonic-frameworks-runner/sonic-frameworks-runner.spec
 --- a/sonic-frameworks-runner/sonic-frameworks-runner.spec
 +++ b/sonic-frameworks-runner/sonic-frameworks-runner.spec
+@@ -9,1 +9,1 @@
+-Version: 6.26.0
++Version: 6.27.0
 @@ -77,1 +77,2 @@
 +Provides: cmake(KF6Runner) = %{version}
  Conflicts: %{_lib}KF6Runner-devel
