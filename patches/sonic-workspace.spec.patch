@@ -18,6 +18,8 @@ diff --git a/sonic-workspace/sonic-workspace.spec b/sonic-workspace/sonic-worksp
  Conflicts:  plasma-workspace-devel
 @@ -313,1 +313,0 @@
 -rm -rf %{buildroot}/%{_libdir}/cmake
+@@ -366,1 +366,0 @@
+-%{_qtdir}/qml/org/kde/plasma/workspace/dialogs
 @@ -551,7 +551,7 @@
 -# %{_libdir}/cmake/KRunnerAppDBusInterface
 -# %{_libdir}/cmake/KSMServerDBusInterface
