@@ -4,6 +4,9 @@ diff --git a/sonic-workspace/sonic-workspace.spec b/sonic-workspace/sonic-worksp
 @@ -12,1 +12,1 @@
 -Version: 6.6.5
 +Version: 6.7.2
+@@ -151,1 +151,2 @@
++BuildRequires: pkgconfig(xcb-icccm)
+ BuildRequires: pkgconfig(xcb)
 @@ -258,1 +258,8 @@
 +Provides: cmake(KRunnerAppDBusInterface) = %{version}
 +Provides: cmake(KSMServerDBusInterface) = %{version}
