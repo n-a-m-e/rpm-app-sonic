@@ -9,9 +9,6 @@ diff --git a/sonic-frameworks-io/sonic-frameworks-io.spec b/sonic-frameworks-io/
  Conflicts:  %{_lib}KF6KIO-devel
 @@ -124,1 +124,0 @@
 -rm -rf %{buildroot}/%{_libdir}/cmake
-@@ -136,2 +136,0 @@
--%{_qtdir}/plugins/kf6/kio/kio_ghelp.so
--%{_qtdir}/plugins/kf6/kio/kio_help.so
 @@ -166,1 +166,1 @@
 -# %{_libdir}/cmake/KF6KIO
 +%{_libdir}/cmake/KF6KIO
