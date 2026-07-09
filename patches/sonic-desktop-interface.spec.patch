@@ -7,3 +7,12 @@ diff --git a/sonic-desktop-interface/sonic-desktop-interface.spec b/sonic-deskto
 @@ -25,1 +25,1 @@
 -BuildRequires: cmake(KWinDBusInterface) = %{version}
 +BuildRequires: cmake(KWinX11DBusInterface) = %{version}
+@@ -205,1 +205,0 @@
+-%{_libdir}/libexec/kf6/kauth/kcmdatetimehelper
+@@ -220,1 +220,0 @@
+-%{_datadir}/dbus-1/system-services/*
+@@ -235,2 +235,0 @@
+-%{_datadir}/dbus-1/system.d/org.kde.kcontrol.kcmclock.conf
+-%{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmclock.policy
+@@ -279,1 +279,0 @@
+-%{_qtdir}/plugins/plasma/applets/org.kde.plasma.marginsseparator.so
